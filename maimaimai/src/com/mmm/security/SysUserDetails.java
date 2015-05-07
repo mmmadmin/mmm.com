@@ -4,8 +4,6 @@ import java.util.Collection;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -14,17 +12,14 @@ import com.mmm.dao.impl.SysUserDaoImpl;
 import com.mmm.model.SysUser;
 
 public class SysUserDetails implements UserDetails {
-	private final static Logger log = LogManager.getLogger(SysUserDetails.class.getName());
+	private final static Logger log = LogManager.getLogger(SysUserDetails.class
+			.getName());
 	private static final long serialVersionUID = 3588829073590454864L;
 	private SysUser sysUser;
 	private SysUserDao userdao;
 
-	public SysUserDetails(String username) {
+	public SysUserDetails(String username, SysUserDao dao) {
 		super();
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-
-		SysUserDao dao = (SysUserDao) context.getBean("SysUserDao");
-
 		this.userdao = dao;
 		this.sysUser = dao.findUserByUsername(username);
 		log.debug("SysUserDetails constructor");
@@ -37,7 +32,7 @@ public class SysUserDetails implements UserDetails {
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
-		SysUserDaoImpl uservice = (SysUserDaoImpl)userdao;
+		SysUserDaoImpl uservice = (SysUserDaoImpl) userdao;
 		return uservice.findRolesByUsername(getUsername());
 	}
 
