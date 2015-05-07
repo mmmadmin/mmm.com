@@ -12,7 +12,7 @@
 	</bean>
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-		p:location="mmm.db.properties" />
+		p:location="classpath:mmm.db.properties" />
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">

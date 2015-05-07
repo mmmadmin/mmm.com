@@ -8,7 +8,6 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:spring-jdbc-config.xml
-			classpath:spring-servlet-context.xml
 			classpath:spring-security.xml
 		</param-value>
 	</context-param>
@@ -32,6 +31,10 @@
 	<servlet>
 		<servlet-name>maimaimai</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-servlet-context.xml</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
