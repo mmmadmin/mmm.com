@@ -15,7 +15,7 @@
 	<Loggers>
 		<logger name="com.mmm" level="debug" />
 		<Root level="trace">
-			<AppenderRef ref="FileLogger" />
+			<AppenderRef ref="STDOUT" />
 		</Root>
 	</Loggers>
 </Configuration>

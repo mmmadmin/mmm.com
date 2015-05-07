@@ -7,7 +7,9 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>src/beans.xml</config>
+		<config>src/spring-security.xml</config>
+		<config>src/spring-servlet-context.xml</config>
+		<config>src/spring-jdbc-config.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
