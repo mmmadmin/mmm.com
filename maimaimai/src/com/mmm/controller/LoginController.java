@@ -22,7 +22,13 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login() {
 		log.debug("Get /login");
-		return new ModelAndView("login", "command", new SysUser());
+		return new ModelAndView("login", "user", new SysUser());
+	}
+
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	public ModelAndView home() {
+		log.debug("Get /home");
+		return new ModelAndView("home", "user", new SysUser());
 	}
 
 	@RequestMapping(value = "/login/check")//, method = RequestMethod.POST)

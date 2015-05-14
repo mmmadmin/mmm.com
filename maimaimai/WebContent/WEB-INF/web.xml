@@ -39,11 +39,15 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>maimaimai</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
 
 	<error-page>
 		<error-code>403</error-code>
 		<location>/error.html</location>
 	</error-page>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
