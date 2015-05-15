@@ -10,6 +10,7 @@
 		<config>src/spring-security.xml</config>
 		<config>src/spring-servlet-context.xml</config>
 		<config>src/spring-jdbc-config.xml</config>
+		<config>src/spring-webflow-config.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

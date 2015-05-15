@@ -29,6 +29,7 @@
 			Welcome : ${pageContext.request.userPrincipal.name} | <a
 				href="javascript:formSubmit()"> Logout</a>
 		</h2>
+		<p><a href="shopping">View Cart</a>
 	</c:if>
 	<c:if test="${pageContext.request.userPrincipal.name == null}">
 		<p>Get started by clicking "Login"...

@@ -45,7 +45,7 @@
 		<logout invalidate-session="true" logout-success-url="/home"
 			logout-url="/j_spring_security_logout" delete-cookies="JSESSIONID" />
 		<access-denied-handler error-page="/denied" />
-		<session-management invalid-session-url="/resources/invalidesession.html">
+		<session-management invalid-session-url="/timeout.jsp">
 			<concurrency-control max-sessions="1"
 				expired-url="/resources/expiredsession.html" />
 		</session-management>
