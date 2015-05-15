@@ -3,6 +3,16 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<error-code>403</error-code>
+		<location>/error.html</location>
+	</error-page>
+
+
 	<display-name>Spring MVC Application</display-name>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -39,15 +49,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>maimaimai</servlet-name>
-		<url-pattern>/home</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-	<error-page>
-		<error-code>403</error-code>
-		<location>/error.html</location>
-	</error-page>
-
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
 </web-app>

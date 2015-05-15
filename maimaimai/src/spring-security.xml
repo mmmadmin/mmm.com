@@ -43,7 +43,7 @@
 			password-parameter="password" /> -->
 		<form-login login-page="/login.jsp" login-processing-url="/login/check"
 			username-parameter="username" password-parameter="password"
-			default-target-url="/secure/home" always-use-default-target="true" />
+			default-target-url="/login/success" always-use-default-target="true" />
 		<logout invalidate-session="true" logout-success-url="http://www.google.com"
 			logout-url="/j_spring_security_logout" delete-cookies="JSESSIONID" />
 		<access-denied-handler error-page="/denied" />
