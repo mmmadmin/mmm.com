@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include.jsp" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,8 +20,7 @@
 		<form:form action="/login/check" id="form-login"
 			class="form-login" method="post">
 			<div class="input-container">
-				<form:label path="username" for="login_email" class="required">Email Address or
-					Username</form:label>
+				<form:label path="username" for="login_email" class="required">Email Address or Username</form:label>
 				<form:input path="username" type="text" id="login_email"
 					name="login[email]" required="required"
 					placeholder="Email Address or Username" class="input-control"

@@ -36,9 +36,9 @@ public class AdminController {
 //		return "user_list";
 //	}
 	
-	@RequestMapping(value = "/secure/hello", method = RequestMethod.GET)
-	public ModelAndView getdata() {
-		log.debug("Get /secure/hello");
+	@RequestMapping(value = "/secure/home", method = RequestMethod.GET)
+	public ModelAndView getUser() {
+		log.debug("Get /secure/home");
 		List<SysUser> list = getList();
  
 		//return back to user_list.jsp
