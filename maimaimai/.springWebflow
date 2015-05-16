@@ -11,5 +11,9 @@
 			<file>src/com/mmm/flows/FlowShopping.xml</file>
 			<name><![CDATA[FlowShopping]]></name>
 		</config>
+		<config>
+			<file>src/com/mmm/flows/FlowRegister.xml</file>
+			<name><![CDATA[FlowRegister]]></name>
+		</config>
 	</configs>
 </webflow-project-description>

@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Member Login</title>
+<title>User Registration</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/cotd_v2_50db8ea.css">
 </head>
 <body>
 	<h1>
-		!<td width="100%"><b>&nbsp;Current Date and time is:&nbsp; <font
+		<td width="100%"><b>&nbsp;Current Date and time is:&nbsp; <font
 				color="#FF0000"> <%=new java.util.Date()%>
 			</font></b></td>${pageContext.request.contextPath}/j_spring_security_check
 	</h1>
 	<div id="login-container" class="login-box clearfix">
-		<h3>Login</h3>
+		<h3>User Registration Form</h3>
 
 		<form:form action="/login/check" id="form-login"
 			class="form-login" method="post">

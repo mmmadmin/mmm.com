@@ -30,8 +30,9 @@
 		</transition>
 	</view-state>
 
-	<end-state id="returnToIndex" view="externalRedirect:servletRelative:/home">
+	<end-state id="returnToIndex" view="externalRedirect:/home">
 	</end-state>
 
 
+	
 </flow>
