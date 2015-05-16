@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<var name="user" class="com.mmm.model.SysUser" />
+	<on-start>
+		<set name="conversationScope.sysUser" value="user"></set>
+	</on-start>
+	<view-state id="registration" view="registration">
+		<transition on="addAddress" to="address" bind="false">
+			<set name="flashScope.addressId" value="''" />
+		</transition>
+		<transition on="editAddress" to="address">
+			<set name="flashScope.addressId" value="requestParameters.addressId" />
+		</transition>
+		<transition on="deleteAddress" to="personForm">
+			<evaluate
+				expression="personService.deleteAddress(id, requestParameters.addressId)"
+				result="flowScope.person" />
+		</transition>
+		<transition on="save" to="viewUser">
+			<evaluate expression="personService.save(person)" result="flowScope.person" />
+			<set name="flowScope.id" value="person.id" />
+			<set name="flashScope.statusMessageKey" value="'person.form.msg.success'" />
+			<render fragments="content" />
+		</transition>
+		<transition on="cancel" to="cancel" bind="false">
+			<evaluate expression="sysUserService.getRandomUser()" result="flowScope.person" />
+		</transition>
+	</view-state>
+
+	<view-state id="viewUser" view="viewUser">
+		<transition on="submit" to="viewUser" />
+	</view-state>
+
+
+
+	<view-state id="start">
+	</view-state>
+
+</flow>
