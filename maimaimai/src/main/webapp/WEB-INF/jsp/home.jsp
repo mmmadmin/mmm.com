@@ -34,7 +34,7 @@
 	<c:if test="${pageContext.request.userPrincipal.name == null}">
 		<p>Get started by clicking "Login"...
 		<p>
-			<A HREF="<c:url value="login"/>">Login</a>
+			<a HREF="<c:url value="login"/>">Login</a>
 	</c:if>
 </body>
 </html>

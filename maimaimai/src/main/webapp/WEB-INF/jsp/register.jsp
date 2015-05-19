@@ -17,13 +17,13 @@
 	<div id="login-container" class="login-box clearfix">
 		<h3>User Registration Form</h3>
 
-		<form:form action="/login/check" id="form-login"
+		<form:form action="/register/new" id="form-login" modelAttribute="user"
 			class="form-login" method="post">
 			<div class="input-container">
-				<form:label path="username" for="login_email" class="required">Email Address or Username</form:label>
+				<form:label path="username" for="login_email" class="required">Email Address as Username</form:label>
 				<form:input path="username" type="text" id="login_email"
 					name="login[email]" required="required"
-					placeholder="Email Address or Username" class="input-control"
+					placeholder="Email Address as Username" class="input-control"
 					autofocus="autofocus" />
 			</div>
 			<div class="input-container">
@@ -32,26 +32,20 @@
 					name="login[password]" required="required" placeholder="Password"
 					class="input-control" />
 			</div>
-			<div class="clearfix actions">
-				<p class="forgot-password pull-left">
-					<a href="/reset-password" id="link-forgotPassword"
-						class="text-link">I forgot my password</a>
-				</p>
+			<div class="input-container">
+				<form:label path="fullname" for="address_billing" class="required">Billing Address</form:label>
+				<form:input path="fullname" type="textfield" id="address_billing"
+					name="address[billing]" required="required" placeholder="Billing Address"
+					class="input-control" />
+			</div>
 				<p class="submit pull-right button-controller">
 					<input type="hidden" id="login__token" name="login[_token]"
 						value="kB-nkl7u_bPbse7k85nmoo1eR7ZeU1E1iIYrm8Zkasg">
 					<button class="btn success pull-right" id="button-login"
-						data-loading="button">Login</button>
+						data-loading="button">Sign Up</button>
 				</p>
 			</div>
 		</form:form>
-
-		<hr>
-
-		<p class="join-link pull-right button-controller no-margin">
-			<a href="/register" id="link-register" class="text-link"> Not a
-				member? Join Now! </a>
-		</p>
 
 	</div>
 </body>

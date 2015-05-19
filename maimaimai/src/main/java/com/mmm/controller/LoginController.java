@@ -29,6 +29,13 @@ public class LoginController {
 		log.debug("Get /home");
 		return new ModelAndView("home", "user", new SysUser());
 	}
+	
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public ModelAndView register() {
+		log.debug("Get /register");
+		return new ModelAndView("register", "user", new SysUser());
+	}
+
 
 //	@RequestMapping(value = "/login/check")//, method = RequestMethod.POST)
 //	public String loginCheck(SysUser user, RedirectAttributes redirectAttributes) {

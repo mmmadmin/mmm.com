@@ -8,7 +8,7 @@
 	<on-start>
 		<set name="conversationScope.sysUser" value="user"></set>
 	</on-start>
-	<view-state id="registration" view="registration">
+	<view-state view="register" id="RegStep1" popup="true">
 		<transition on="addAddress" to="address" bind="false">
 			<set name="flashScope.addressId" value="''" />
 		</transition>
@@ -35,9 +35,5 @@
 		<transition on="submit" to="viewUser" />
 	</view-state>
 
-
-
-	<view-state id="start">
-	</view-state>
 
 </flow>

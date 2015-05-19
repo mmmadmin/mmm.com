@@ -34,7 +34,7 @@
 			</div>
 			<div class="clearfix actions">
 				<p class="forgot-password pull-left">
-					<a href="/reset-password" id="link-forgotPassword"
+					<a href="<c:url value="reset-password"/>" id="link-forgotPassword"
 						class="text-link">I forgot my password</a>
 				</p>
 				<p class="submit pull-right button-controller">
@@ -49,7 +49,7 @@
 		<hr>
 
 		<p class="join-link pull-right button-controller no-margin">
-			<a href="/register" id="link-register" class="text-link"> Not a
+			<a href="<c:url value="register"/>" id="link-register" class="text-link"> Not a
 				member? Join Now! </a>
 		</p>
 
