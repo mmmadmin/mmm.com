@@ -5,7 +5,8 @@
 <html>
 <head>
 <title><tiles:getAsString name="title" /></title>
-<link rel="stylesheet" type="text/css" href="<c:url value="/css/main.css"/>" />
+<%-- <link rel="stylesheet" type="text/css" href="<c:url value="/css/main.css"/>" /> --%>
+<link rel="stylesheet" href="<c:url value="/css/cotd_v2_50db8ea.css"/>" />
 </head>
 <body>
 <div id="header">

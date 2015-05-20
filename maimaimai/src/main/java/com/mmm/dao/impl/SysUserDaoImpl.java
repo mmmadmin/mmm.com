@@ -15,8 +15,9 @@ import com.mmm.dao.SysUserDao;
 import com.mmm.model.SysUser;
 
 public class SysUserDaoImpl implements SysUserDao {
-	
-	private final static Logger log = LogManager.getLogger(SysUserDaoImpl.class.getName());
+
+	private final static Logger log = LogManager.getLogger(SysUserDaoImpl.class
+			.getName());
 
 	private JdbcTemplate jdbcTemplate;
 
@@ -50,28 +51,33 @@ public class SysUserDaoImpl implements SysUserDao {
 	public SysUser findUserByUsername(String username) {
 		String SQL = "select * from sys_user where user_name = ?";
 		SysUser user = new SysUser();
-		jdbcTemplate.query(SQL, new Object[]{username},new RowCallbackHandler() {
-			@Override
-			public void processRow(ResultSet rs) throws SQLException {
-				user.setFullname(rs.getString("name"));
-				user.setUsername(rs.getString("user_name"));
-				user.setPassword(rs.getString("user_password"));
-				user.setSys_id(rs.getString("sys_id"));
-			}
-		});
+		jdbcTemplate.query(SQL, new Object[] { username },
+				new RowCallbackHandler() {
+					@Override
+					public void processRow(ResultSet rs) throws SQLException {
+						user.setFullname(rs.getString("name"));
+						user.setUsername(rs.getString("user_name"));
+						user.setPassword(rs.getString("user_password"));
+						user.setSys_id(rs.getString("sys_id"));
+					}
+				});
 		return user;
 	}
-	
-	public List<SimpleGrantedAuthority> findRolesByUsername(String username){
+
+	public List<SimpleGrantedAuthority> findRolesByUsername(String username) {
 		SysUser user = findUserByUsername(username);
 		List<SimpleGrantedAuthority> list = new ArrayList<SimpleGrantedAuthority>();
 		String SQL = "select granted_role from sys_user_role where user_sys_id = ?";
 		log.debug(SQL);
-		List<String> listRoles = (List<String>)jdbcTemplate.queryForList(SQL, new Object[]{user.getSys_id()}, String.class);
-		for(String role:listRoles){
-			SimpleGrantedAuthority sga = new SimpleGrantedAuthority("role");
+		List<String> listRoles = (List<String>) jdbcTemplate.queryForList(SQL,
+				new Object[] { user.getSys_id() }, String.class);
+		log.debug("Role list size: " + listRoles.size() + " content: "
+				+ listRoles.toString());
+		for (String role : listRoles) {
+			SimpleGrantedAuthority sga = new SimpleGrantedAuthority(role);
 			list.add(sga);
-			log.debug("User: "+user.getFullname()+" has role: "+role);
+			log.debug("User: " + user.getFullname() + " has role: "
+					+ sga.getAuthority());
 		}
 		return list;
 	}

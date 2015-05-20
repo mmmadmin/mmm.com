@@ -31,7 +31,7 @@ public class SysUserDetails implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
+		log.debug("getAuthorities()");
 		SysUserDaoImpl uservice = (SysUserDaoImpl) userdao;
 		return uservice.findRolesByUsername(getUsername());
 	}

@@ -21,10 +21,14 @@
 		<beans:property name="rolePrefix" value=""></beans:property>
 	</beans:bean>
 
-	<beans:bean id="webExpressionVoter"
-		class="org.springframework.security.web.access.expression.WebExpressionVoter">
+	<beans:bean id="webExpressionVoter" class="org.springframework.security.web.access.expression.WebExpressionVoter">
+		<beans:property name="expressionHandler" ref="webSecurityExpressionHandler"></beans:property>
 	</beans:bean>
-
+	
+	<beans:bean id="webSecurityExpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler">
+		<beans:property name="defaultRolePrefix" value=""></beans:property>
+	</beans:bean>
+ 
 	<beans:bean id="accessDecisionManager"
 		class="org.springframework.security.access.vote.AffirmativeBased">
 		<beans:constructor-arg name="decisionVoters"
@@ -36,7 +40,7 @@
 		<!-- <intercept-url pattern="/login" access="permitAll" /> <intercept-url 
 			pattern="/resources/**" access="permitAll" /> -->
 		<intercept-url pattern="/**" access="permitAll" />
-		<intercept-url pattern="/secure/**" access="hasRole('admin')" />
+		<intercept-url pattern="/secure/**" access="hasRole('ROLE_admin')" />
 		<!-- <form-login login-page="/login" login-processing-url="/j_spring_security_check" 
 			authentication-failure-url="/login/failure" username-parameter="username" 
 			password-parameter="password" /> -->

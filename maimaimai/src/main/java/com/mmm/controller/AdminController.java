@@ -51,11 +51,11 @@ public class AdminController {
  
 	private List<SysUser> getList() {
  
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring/spring-jdbc-config.xml");
 		
 		SysUserDao dao = (SysUserDao)context.getBean("SysUserDao");
 		List<SysUser> users = dao.findAllUser();
-		log.debug("model.addAllAttributes(users)"+users.size());
+		log.debug("model.addAllAttributes(users) returned: "+users.size()+" objects");
 
 		return users;
  

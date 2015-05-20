@@ -6,8 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Spring Hello World</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/cotd_v2_50db8ea.css">
+<link rel="stylesheet" href="<c:url value="/css/cotd_v2_50db8ea.css"/>" />
 </head>
 <body>
 	<h1>
