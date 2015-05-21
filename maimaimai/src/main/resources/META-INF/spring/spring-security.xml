@@ -18,7 +18,7 @@
 		should be in the form ROLE_{XXX} -->
 	<beans:bean id="roleVoter"
 		class="org.springframework.security.access.vote.RoleVoter">
-		<beans:property name="rolePrefix" value=""></beans:property>
+		<beans:property name="rolePrefix" value="ROLE_"></beans:property>
 	</beans:bean>
 
 	<beans:bean id="webExpressionVoter" class="org.springframework.security.web.access.expression.WebExpressionVoter">
@@ -26,24 +26,23 @@
 	</beans:bean>
 	
 	<beans:bean id="webSecurityExpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler">
-		<beans:property name="defaultRolePrefix" value=""></beans:property>
+		<beans:property name="defaultRolePrefix" value="ROLE_"></beans:property>
 	</beans:bean>
  
 	<beans:bean id="accessDecisionManager"
 		class="org.springframework.security.access.vote.AffirmativeBased">
-		<beans:constructor-arg name="decisionVoters"
-			ref="webExpressionVoter" />
+    <beans:constructor-arg name="decisionVoters">
+        <beans:list>
+            <beans:ref bean="webExpressionVoter" />
+            <beans:ref bean="roleVoter" />
+        </beans:list>
+    </beans:constructor-arg>			
 	</beans:bean>
 
 	<http use-expressions="true" authentication-manager-ref="dao-auth"
 		access-decision-manager-ref="accessDecisionManager">
-		<!-- <intercept-url pattern="/login" access="permitAll" /> <intercept-url 
-			pattern="/resources/**" access="permitAll" /> -->
 		<intercept-url pattern="/**" access="permitAll" />
-		<intercept-url pattern="/secure/**" access="hasRole('ROLE_admin')" />
-		<!-- <form-login login-page="/login" login-processing-url="/j_spring_security_check" 
-			authentication-failure-url="/login/failure" username-parameter="username" 
-			password-parameter="password" /> -->
+		<intercept-url pattern="/secure/**" access="hasRole('ROLE_ADMIN')" />
 		<form-login login-page="/login" login-processing-url="/j_spring_security_check"
 			username-parameter="username" password-parameter="password" default-target-url="/secure/home" />
 		<logout invalidate-session="true" logout-success-url="/home"
@@ -60,5 +59,33 @@
 		<authentication-provider user-service-ref="userDetailsService">
 		</authentication-provider>
 	</authentication-manager>
+	
+<!-- 	<sec:http ... >
+
+    .
+    . access denied handlers, concurrency control, port mappings etc
+    .
+
+    <sec:expression-handler ref="defaultWebSecurityExpressionHandler" />
+
+</sec:http>
+
+<bean id="defaultWebSecurityExpressionHandler"
+      class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler">
+      <beans:property name="roleHierarchy" ref="roleHierarchy"/>
+</bean>
+
+<bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+    <beans:property name="decisionVoters">
+        <list>
+            <ref bean="roleHierarchyVoter" />
+            <bean class="org.springframework.security.web.access.expression.WebExpressionVoter">
+                <beans:property name="expressionHandler" ref="defaultWebSecurityExpressionHandler"/>
+            </bean>
+        </list>
+    </beans:property>
+</bean>
+ -->
+
 
 </beans:beans>

@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,7 +36,7 @@ public class AdminController {
 //
 //		return "user_list";
 //	}
-	
+	@Secured ({"ROLE_ADMIN"})
 	@RequestMapping(value = "/secure/home", method = RequestMethod.GET)
 	public ModelAndView getUser() {
 		log.debug("Get /secure/home");
