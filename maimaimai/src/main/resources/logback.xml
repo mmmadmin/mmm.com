@@ -1,0 +1,68 @@
+<!-- <configuration> <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"> 
+	<encoder> <pattern>web - %date [%thread] %-5level %logger{36} - %message%n 
+	</pattern> </encoder> </appender> <logger name="org.springframework" level="WARN" 
+	/> <logger name="org.springframework.transaction" level="WARN" /> in order 
+	to debug some marshalling issues, this needs to be TRACE <logger name="org.springframework.web.servlet.mvc" 
+	level="WARN" /> <root level="INFO"> <appender-ref ref="STDOUT" /> </root> 
+	</configuration> -->
+
+<!-- <configuration> <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"> 
+	<encoder> <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern> 
+	</encoder> </appender> <logger name="org.springframework.security" level="${sec.log.level}:-WARN"/> 
+	<root level="${root.level}:-WARN"> <appender-ref ref="STDOUT" /> </root> 
+	</configuration> -->
+
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<property name="DEV_HOME" value="c:/dev/logs" />
+
+	<appender name="FILE-THREAD" class="ch.qos.logback.classic.sift.SiftingAppender">
+
+		<discriminator>
+			<key>logFileName</key>
+			<defaultValue>head0</defaultValue>
+		</discriminator>
+
+		<sift>
+
+			<appender name="FILE-${logFileName}"
+				class="ch.qos.logback.core.rolling.RollingFileAppender">
+				<file>${DEV_HOME}/${logFileName}.log</file>
+
+				<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+					<Pattern>
+						%d{yyyy-MM-dd HH:mm:ss} [%thread] %level %logger{35} - %msg%n
+					</Pattern>
+				</encoder>
+
+				<rollingPolicy
+					class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+					<FileNamePattern>${DEV_HOME}/${logFileName}.%i.log.zip
+					</FileNamePattern>
+					<MinIndex>1</MinIndex>
+					<MaxIndex>10</MaxIndex>
+				</rollingPolicy>
+
+				<triggeringPolicy
+					class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+					<MaxFileSize>10MB</MaxFileSize>
+				</triggeringPolicy>
+			</appender>
+
+		</sift>
+	</appender>
+
+	<logger name="org.springframework.security" level="${sec.log.level}:-WARN" />
+
+	<root level="${root.level}:-WARN">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE-THREAD" />
+	</root>
+
+</configuration>

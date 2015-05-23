@@ -6,8 +6,18 @@
 <body>
 <h2>Access denied</h2>
 
-<p>
-You do not have the right to access this page. Please <a href="<c:url value='/'/>">start again</a>.
-</p>
+	<c:if test="${pageContext.request.userPrincipal.name != null}">
+		<h2>
+			Sorry : ${pageContext.request.userPrincipal.name} !
+			You do not have the right to access this page. Please <a href="<c:url value='/'/>">Return to Home</a>.
+		</h2>
+
+	</c:if>
+	<c:if test="${pageContext.request.userPrincipal.name == null}">
+		<h2>
+			Sorry! You do not have the right to access this page. Please <a href="<c:url value='/'/>">Return to Home</a>.
+		</h2>
+	</c:if>
+
 </body>
 </html>

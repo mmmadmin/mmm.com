@@ -6,16 +6,16 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 
-	<context:component-scan base-package="com.mmm.security" />
+<!-- 	<context:component-scan base-package="com.mmm" />
 
-	<global-method-security pre-post-annotations="enabled">
-		<!-- AspectJ pointcut expression that locates our "post" method and applies 
+	<global-method-security secured-annotations="enabled">
+		AspectJ pointcut expression that locates our "post" method and applies 
 			security that way <protect-pointcut expression="execution(* bigbank.*Service.post*(..))" 
-			access="ROLE_TELLER"/> -->
+			access="ROLE_TELLER"/>
 	</global-method-security>
 
-	<!-- Configuring RoleVoter bean to use custom access roles, by default roles 
-		should be in the form ROLE_{XXX} -->
+	Configuring RoleVoter bean to use custom access roles, by default roles 
+		should be in the form ROLE_{XXX}
 	<beans:bean id="roleVoter"
 		class="org.springframework.security.access.vote.RoleVoter">
 		<beans:property name="rolePrefix" value="ROLE_"></beans:property>
@@ -26,7 +26,7 @@
 	</beans:bean>
 	
 	<beans:bean id="webSecurityExpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler">
-		<beans:property name="defaultRolePrefix" value="ROLE_"></beans:property>
+		<beans:property name="defaultRolePrefix" value=""></beans:property>
 	</beans:bean>
  
 	<beans:bean id="accessDecisionManager"
@@ -34,15 +34,25 @@
     <beans:constructor-arg name="decisionVoters">
         <beans:list>
             <beans:ref bean="webExpressionVoter" />
-            <beans:ref bean="roleVoter" />
         </beans:list>
     </beans:constructor-arg>			
-	</beans:bean>
+	</beans:bean> -->
+	
+            <!-- <beans:ref bean="roleVoter" /> -->
 
-	<http use-expressions="true" authentication-manager-ref="dao-auth"
-		access-decision-manager-ref="accessDecisionManager">
-		<intercept-url pattern="/**" access="permitAll" />
-		<intercept-url pattern="/secure/**" access="hasRole('ROLE_ADMIN')" />
+<!-- 	<http use-expressions="true" authentication-manager-ref="dao-auth"
+		access-decision-manager-ref="accessDecisionManager"> -->
+	<http use-expressions="true" authentication-manager-ref="dao-auth">
+		<intercept-url pattern="/index*" access="permitAll" />
+		<intercept-url pattern="/home*" access="permitAll" />
+		<intercept-url pattern="/login*" access="permitAll" />
+		<intercept-url pattern="/timeout*" access="permitAll" />
+		<intercept-url pattern="/error*" access="permitAll" />
+		<intercept-url pattern="/denied*" access="isAuthenticated()" />
+		<intercept-url pattern="/css/**" access="permitAll" />
+		<intercept-url pattern="/memeber/**" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/secure/**" access="hasRole('ROLE_MAINT')" />
+		<intercept-url pattern="/**" access="isAuthenticated()" />
 		<form-login login-page="/login" login-processing-url="/j_spring_security_check"
 			username-parameter="username" password-parameter="password" default-target-url="/secure/home" />
 		<logout invalidate-session="true" logout-success-url="/home"
@@ -50,7 +60,7 @@
 		<access-denied-handler error-page="/denied" />
 		<session-management invalid-session-url="/timeout.jsp">
 			<concurrency-control max-sessions="1"
-				expired-url="/resources/expiredsession.html" />
+				expired-url="/timeout.jsp" />
 		</session-management>
 	</http>
 

@@ -21,7 +21,7 @@ public class LoginController {
 		public String login(Model model) {
 			log.debug("Get /login");
 			model.addAttribute("command", new SysUser());
-			return "login.bk";
+			return "login";
 	}
 
 	@RequestMapping(value = "/home", method = RequestMethod.GET)

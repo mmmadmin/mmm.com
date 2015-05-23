@@ -4,7 +4,8 @@
 		<Console name="CONSOLE" target="SYSTEM_OUT">
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 		</Console>
-		<File name="FileLogger" fileName="/Users/bill.tang/Documents/mmm.log" append="true">
+		<File name="FileLogger" fileName="/Users/bill.tang/Documents/mmm.log"
+			append="true">
 			<PatternLayout pattern="%d %t %-5p %c{2} (%F:%L) - %m%n" />
 		</File>
 		<Console name="STDOUT" target="SYSTEM_OUT">
@@ -14,6 +15,7 @@
 	</Appenders>
 	<Loggers>
 		<logger name="com.mmm" level="debug" />
+		<logger name="org.springframework.security" level="all" />
 		<Root level="trace">
 			<AppenderRef ref="STDOUT" />
 		</Root>
