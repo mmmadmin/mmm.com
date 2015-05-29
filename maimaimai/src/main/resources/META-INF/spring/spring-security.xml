@@ -46,6 +46,7 @@
 		<intercept-url pattern="/index*" access="permitAll" />
 		<intercept-url pattern="/home*" access="permitAll" />
 		<intercept-url pattern="/login*" access="permitAll" />
+		<intercept-url pattern="/register*" access="permitAll" />
 		<intercept-url pattern="/timeout*" access="permitAll" />
 		<intercept-url pattern="/error*" access="permitAll" />
 		<intercept-url pattern="/denied*" access="isAuthenticated()" />
