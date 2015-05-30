@@ -8,24 +8,38 @@ audio, canvas, video {
 }
 
 audio
+
+
 :not
+
  
+
 (
 [
 controls
 ]
+
  
+
 ){
 display
-:
- 
-none
-;
 
-	
-height
+
 :
+
  
+
+none
+
+
+;
+height
+
+
+:
+
+ 
+
 0
 }
 [hidden], template {
@@ -111,16 +125,28 @@ img {
 }
 
 svg
+
+
 :not
+
  
+
 (
 :root
+
  
+
 ){
 overflow
+
+
 :
+
  
+
 hidden
+
+
 
 
 }
@@ -1738,7 +1764,11 @@ input[type="text"], input[type="email"], input[type="date"], input[type="submit"
 opacity
 
 
+
+
 :
+
+
 
 
 1
@@ -1753,7 +1783,11 @@ opacity
 opacity
 
 
+
+
 :
+
+
 
 
 1
@@ -1768,7 +1802,11 @@ keyframes content-fadein { 0%{
 opacity
 
 
+
+
 :
+
+
 
 
 1
@@ -1795,7 +1833,11 @@ opacity
 -moz-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -1806,7 +1848,11 @@ px
 -ms-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -1817,7 +1863,11 @@ px
 -webkit-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -1828,7 +1878,11 @@ px
 transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -1843,7 +1897,11 @@ px
 -moz-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -1854,7 +1912,11 @@ px
 -ms-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -1865,7 +1927,11 @@ px
 -webkit-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -1876,7 +1942,11 @@ px
 transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -1900,7 +1970,11 @@ px
 -moz-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -1911,7 +1985,11 @@ px
 -ms-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -1922,7 +2000,11 @@ px
 -webkit-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -1933,7 +2015,11 @@ px
 transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -1948,7 +2034,11 @@ px
 -moz-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -1959,7 +2049,11 @@ px
 -ms-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -1970,7 +2064,11 @@ px
 -webkit-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -1981,7 +2079,11 @@ px
 transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -2005,7 +2107,11 @@ keyframes error-alert { 0%, 100%{
 -moz-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -2016,7 +2122,11 @@ px
 -ms-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -2027,7 +2137,11 @@ px
 -webkit-transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -2038,7 +2152,11 @@ px
 transform
 
 
+
+
 :translate3d
+
+
 
 
 (-10
@@ -2053,7 +2171,11 @@ px
 -moz-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -2064,7 +2186,11 @@ px
 -ms-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -2075,7 +2201,11 @@ px
 -webkit-transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -2086,7 +2216,11 @@ px
 transform
 
 
+
+
 :translate3d
+
+
 
 
 (10
@@ -2108,28 +2242,44 @@ px
 -moz-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 -ms-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 -webkit-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 }
@@ -2146,28 +2296,44 @@ transform
 -moz-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 -ms-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 -webkit-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 }
@@ -2184,28 +2350,44 @@ keyframes rotation { 0%{
 -moz-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 -ms-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 -webkit-transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 ;
 transform
 
 
+
+
 :rotate(359deg)
+
+
 
 
 }
@@ -3174,7 +3356,11 @@ button.small, input[type="submit"].small {
 top
 
 
+
+
 :
+
+
 
 
 0
@@ -3189,7 +3375,11 @@ top
 top
 
 
+
+
 :
+
+
 
 
 0
@@ -3204,7 +3394,11 @@ keyframes mini-cart-in { 0%{
 top
 
 
+
+
 :
+
+
 
 
 0
@@ -3920,7 +4114,11 @@ top
 top
 
 
+
+
 :
+
+
 
 
 0
@@ -3935,7 +4133,11 @@ top
 top
 
 
+
+
 :
+
+
 
 
 0
@@ -3950,7 +4152,11 @@ keyframes toast-in { 0%{
 top
 
 
+
+
 :
+
+
 
 
 0
@@ -5215,6 +5421,7 @@ top
 
 .well {
 	width: 15em;
+	height: 50em;
 	font-family: inherit;
 	font-size: 20pt;
 	font-weight: 200;
@@ -5229,18 +5436,61 @@ top
 }
 
 #main {
-  clear: both;
-  float: left;
-  width: 100%;
-  position: relative;
-  outline: 0;
+	clear: both;
+	float: left;
+	width: 100%;
+	position: relative;
+	outline: 0;
 }
 
 #content-central {
-  max-width: 1024px;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  clear: both;
+	max-width: 1024px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+	clear: both;
+}
+
+.floatingHeader {
+	position: fixed;
+	width:100%;
+	top: 0;
+	height: 50px;
+	background: #FFF0F0;
+	border: 1px solid #CCC;
+	padding: 0 20 0 0px;
+}
+
+#menu {
+	position: fixed;
+	width: 15em;
+	float: left;
+	clear: left;
+	border-right: 1px solid rgb(153, 153, 153);
+	background-color: rgb(206, 243, 164);
+	padding: 2mm 2mm 2mm 2mm;
+	margin: 60px 0 0 0;
+}
+
+#menu div {
+	border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+#content {
+	color: black;
+	background-color: white;
+	text-align: justify;
+	line-height: 1.5em;
+	margin: 0 0 0 15em;
+	padding: 2mm 5mm 5mm 5mm;
+}
+
+#footer {
+	color: white;
+	background-color: #f88214;
+	font-size: 91%;
+	margin: 0;
+	padding: 1em 2.5mm 2.5ex 2.5mm;
+	clear: both;
 }

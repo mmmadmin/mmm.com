@@ -50,7 +50,9 @@
 		<intercept-url pattern="/timeout*" access="permitAll" />
 		<intercept-url pattern="/error*" access="permitAll" />
 		<intercept-url pattern="/denied*" access="isAuthenticated()" />
+		<intercept-url pattern="/js/**" access="permitAll" />
 		<intercept-url pattern="/css/**" access="permitAll" />
+		<intercept-url pattern="/images/**" access="permitAll" />
 		<intercept-url pattern="/memeber/**" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/secure/**" access="hasRole('ROLE_MAINT')" />
 		<intercept-url pattern="/**" access="isAuthenticated()" />

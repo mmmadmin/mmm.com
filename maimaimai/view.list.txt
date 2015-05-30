@@ -1,0 +1,24 @@
+#The list of views used by the application
+
+/index.jsp
+/css
+/images
+/js
+/public/home
+/public/login
+/public/register
+/public/timeout
+/public/error
+/public/denied
+
+/member/home
+/member/addressBook
+/member/viewCart
+/member/viewOrder
+/member/orderConfirmed
+
+/secure/home
+/secure/manage/users
+/secure/manage/products
+/secure/manage/orders
+/secure/manage/shippings

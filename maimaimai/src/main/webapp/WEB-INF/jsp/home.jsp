@@ -35,5 +35,6 @@
 		<p>
 			<a HREF="<c:url value="login"/>">Login</a>
 	</c:if>
+	<div class="well">Hahaha</div>
 </body>
 </html>

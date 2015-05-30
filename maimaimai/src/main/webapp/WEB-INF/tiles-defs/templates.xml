@@ -20,8 +20,16 @@
 	<definition name="home" extends=".mainTemplate">
 		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
 	</definition>
+	
+	<definition name="login" extends=".mainTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
 
 <!-- Test pages -->
+	<definition name="newCart" extends=".mainTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/newCart.jsp" />
+	</definition>
+	
 	<definition name="tiles" extends=".mainTemplate">
 		<put-attribute name="body" value="/WEB-INF/jsp/user_list.jsp" />
 	</definition>
