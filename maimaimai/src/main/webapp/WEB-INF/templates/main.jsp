@@ -9,16 +9,19 @@
 <link rel="stylesheet" href="<c:url value="/css/cotd_v2_50db8ea.css"/>" />
 </head>
 <body>
-	<div id="header" class="floatingHeader">
-		<div id="headerTitle">
-			<tiles:insertAttribute name="header" />
+	<div id="main">
+		<div id="header" class="floatingHeader">
+			<div id="headerTitle">
+				<tiles:insertAttribute name="header" />
+			</div>
 		</div>
-	</div>
-	<div id="menu">
-		<tiles:insertAttribute name="menu" />
-	</div>
-	<div id="content">
-		<td><tiles:insertAttribute name="body" />
+		<div id="menu-corner">
+			<tiles:insertAttribute name="menu" />
+		</div>
+		<div id="content">
+			<td><tiles:insertAttribute name="body" />
+		</div>
+		<div class="footer_placeholder"></div>
 	</div>
 	<div id="footer">
 		<tiles:insertAttribute name="footer" />

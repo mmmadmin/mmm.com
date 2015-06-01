@@ -40,7 +40,7 @@ height
 
  
 
-0
+0;
 }
 [hidden], template {
 	display: none
@@ -127,24 +127,120 @@ img {
 svg
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :not
 
+
+
+
+
+
+
+
+
  
+
+
+
+
+
+
+
+
 
 (
 :root
 
+
+
+
+
+
+
+
+
  
+
+
+
+
+
+
+
+
 
 ){
 overflow
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
 
  
 
+
+
+
+
+
+
+
+
 hidden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -768,7 +864,8 @@ html, body {
 	background-color: #F9F9F9;
 	color: #222;
 	-webkit-font-smoothing: antialiased;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004)
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	height: 100%;
 }
 
 input, button, select, textarea {
@@ -1766,7 +1863,39 @@ opacity
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1785,7 +1914,39 @@ opacity
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1804,7 +1965,39 @@ opacity
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1835,7 +2028,39 @@ opacity
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1850,7 +2075,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1865,7 +2122,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1880,7 +2169,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1899,7 +2220,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1914,7 +2267,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1929,7 +2314,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1944,7 +2361,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1972,7 +2421,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1987,7 +2468,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2002,7 +2515,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2017,7 +2562,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2036,7 +2613,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2051,7 +2660,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2066,7 +2707,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2081,7 +2754,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2109,7 +2814,39 @@ keyframes error-alert { 0%, 100%{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2124,7 +2861,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2139,7 +2908,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2154,7 +2955,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2173,7 +3006,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2188,7 +3053,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2203,7 +3100,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2218,7 +3147,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :translate3d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2244,7 +3205,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2255,7 +3248,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2266,7 +3291,39 @@ px
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2277,7 +3334,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2298,7 +3387,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2309,7 +3430,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2320,7 +3473,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2331,7 +3516,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2352,7 +3569,39 @@ keyframes rotation { 0%{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2363,7 +3612,39 @@ keyframes rotation { 0%{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2374,7 +3655,39 @@ keyframes rotation { 0%{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2385,7 +3698,39 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3358,7 +4703,39 @@ top
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3377,7 +4754,39 @@ top
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3396,7 +4805,39 @@ top
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4116,7 +5557,39 @@ top
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4135,7 +5608,39 @@ top
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4154,7 +5659,39 @@ top
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5420,12 +6957,11 @@ top
 }
 
 .well {
-	width: 15em;
-	height: 50em;
+	width: 25em;
 	font-family: inherit;
 	font-size: 20pt;
 	font-weight: 200;
-	min-height: 20px;
+	min-height: 200px;
 	padding: 15px;
 	margin-bottom: 20px;
 	margin-left: 20px;
@@ -5441,6 +6977,9 @@ top
 	width: 100%;
 	position: relative;
 	outline: 0;
+	min-height: 100%;
+	_height: 100%;
+	margin-bottom: -120px;
 }
 
 #content-central {
@@ -5454,12 +6993,13 @@ top
 
 .floatingHeader {
 	position: fixed;
-	width:100%;
+	width: 100%;
 	top: 0;
-	height: 50px;
-	background: #FFF0F0;
+	height: 120px;
+	background: #f88214;
 	border: 1px solid #CCC;
 	padding: 0 20 0 0px;
+	border-bottom: 2px solid #ffff00;
 }
 
 #menu {
@@ -5473,8 +7013,139 @@ top
 	margin: 60px 0 0 0;
 }
 
+#menu-corner {
+	position: fixed;
+	top: -6px;
+	left: -40px;
+	width: 300px;
+	padding: 35 30 3 2;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: rotate(-35deg) translate(-92px, 22px);
+	-moz-transform: rotate(-35deg) translate(-92px, 22px);
+	-ms-transform: rotate(-35deg) translate(-92px, 22px);
+	-o-transform: rotate(-35deg) translate(-92px, 22px);
+	transform: rotate(-35deg) translate(-92px, 22px);
+	background-color: #2dbe60;
+	text-align: center;
+}
+
+#menu-corner a {
+	color: #fff;
+	font-size: 120%;
+}
+
 #menu div {
 	border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+.menu-dropdown {
+	border: none;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans",
+		"Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica,
+		sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.menu-dropdown ul {
+	background: #F93;
+	height: 50px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	-webkit-box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+	-moz-box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+	box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+}
+
+.menu-dropdown li {
+	float: left;
+	padding: 0px 0px 0px 15px;
+}
+
+.menu-dropdown li a {
+	color: #000;
+	display: block;
+	font-weight: normal;
+	line-height: 50px;
+	margin: 0px;
+	padding: 0px 25px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.menu-dropdown li a:hover {
+	background: #C60;
+	color: #FFFFFF;
+	text-decoration: none;
+	-webkit-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+	-moz-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+	box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+}
+
+.menu-dropdown ul li:hover a {
+	background: #C60;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.menu-dropdown li ul {
+	display: none;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	position: absolute;
+	width: 200px;
+	z-index: 200;
+}
+
+.menu-dropdown li:hover ul {
+	display: block;
+}
+
+.menu-dropdown li li {
+	display: block;
+	float: none;
+	margin: 0px;
+	padding: 0px;
+	width: 200px;
+	background: #F93;
+	/*this is where the rounded corners for the dropdown disappears*/
+}
+
+.menu-dropdown li:hover li a {
+	background: none;
+}
+
+.menu-dropdown li ul a {
+	display: block;
+	height: 50px;
+	font-size: 12px;
+	font-style: normal;
+	margin: 0px;
+	padding: 0px 10px 0px 15px;
+	text-align: left;
+}
+
+.menu-dropdown li ul a:hover, .menu-dropdown li ul li:hover a {
+	border: 0px;
+	color: #ffffff;
+	text-decoration: none;
+	background: #C60;
+	-webkit-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+	-moz-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+	box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
 }
 
 #content {
@@ -5482,15 +7153,23 @@ top
 	background-color: white;
 	text-align: justify;
 	line-height: 1.5em;
-	margin: 0 0 0 15em;
-	padding: 2mm 5mm 5mm 5mm;
+	max-width: 1280px;
+	margin: 125 auto;
+	color: black;
 }
 
 #footer {
+	height: 120px;
+	bottom: 0;
+	width: 100%;
 	color: white;
 	background-color: #f88214;
-	font-size: 91%;
-	margin: 0;
+	font-size: 80%;
 	padding: 1em 2.5mm 2.5ex 2.5mm;
 	clear: both;
+	color: white;
+}
+
+.footer_placeholder {
+	height: 120px;
 }

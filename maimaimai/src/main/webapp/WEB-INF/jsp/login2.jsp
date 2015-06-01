@@ -61,7 +61,7 @@
 		</div>
 		<img id="pageBackground"
 			alt="Empire Marina Bobbin Head hero, Ku-ring-gai Chase National Park. Photo: Andrew Richards"
-			src="http://www.nationalparks.nsw.gov.au/~/media/NPWS/Images/Parks/Ku-ring-gai-Chase-National-Park/Priority%202/empire-marina-ml/ml-empire-marina-hero.ashx">
+			src="http://www.nationalparks.nsw.gov.au/~/media/NPWS/Images/General/global-pages-background/barrington-tops-np-background.ashx">
 	</div>
 </body>
 </html>

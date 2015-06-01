@@ -35,6 +35,13 @@
 		<p>
 			<a HREF="<c:url value="login"/>">Login</a>
 	</c:if>
-	<div class="well">Hahaha</div>
+	<div class="well">KP Class:
+	</div>
+	<div class="well">
+	Andy Tang loves fried rice!	
+	</div>
+	<div class="well">
+	Mummy loves music movie and cooking! 
+	</div>
 </body>
 </html>

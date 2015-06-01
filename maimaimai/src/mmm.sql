@@ -107,6 +107,7 @@ insert into sys_user (sys_id, user_name, user_password, name) values ('201505162
 insert into sys_user (sys_id, user_name, user_password, name) values ('20150516200052729664702011635382','userTwo','1111','User Two');
 insert into sys_user (sys_id, user_name, user_password, name) values ('20150516200052729773953853136354','userThree','1111','User Three');
 insert into sys_user (sys_id, user_name, user_password, name) values ('20150516200052730288758634587755','userFour','1111','User Four');
+insert into sys_user (sys_id, user_name, user_password, name) values ('20150516200052730288758634587005','AndyTang','1111','Andy Tang');
 insert into sys_user_role (sys_id, user_sys_id, granted_role) values ('20150516200052730291603678411763','20150516200052729130777478939644','ROLE_ADMIN');
 insert into sys_user_role (sys_id, user_sys_id, granted_role) values ('20150516200052731236298868990543','20150516200052729130777478939644','ROLE_USER');
 insert into sys_user_role (sys_id, user_sys_id, granted_role) values ('20150516200052731423393540520357','20150516200052729130777478939644','ROLE_MAINT');
