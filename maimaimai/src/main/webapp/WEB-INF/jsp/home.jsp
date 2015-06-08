@@ -43,5 +43,8 @@
 	<div class="well">
 	Mummy loves music movie and cooking! 
 	</div>
+	<div class="well">
+	<textarea class="form-control"></textarea>
+	</div>
 </body>
 </html>
